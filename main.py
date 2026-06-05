@@ -390,7 +390,7 @@ async def roblox_poll(
     try:
         async with httpx.AsyncClient(timeout=30) as client:
             response = await client.get(
-                f"https://apis.roblox.com/assets/{op_path}",
+                f"https://apis.roblox.com/assets/v1/{op_path}",
                 headers={"x-api-key": api_key}
             )
     except httpx.TimeoutException:
